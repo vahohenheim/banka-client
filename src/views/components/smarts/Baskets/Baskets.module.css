@@ -1,0 +1,17 @@
+.actions {
+    color: var(--gui-color-grey-lighten-1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.actions > div {
+    padding: 10px;
+}
+
+.empty {
+    color: var(--gui-color-primary);
+    text-align: center;
+}

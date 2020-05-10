@@ -1,0 +1,21 @@
+.cardBalance {
+    border: 1px solid var(--gui-color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 100px;
+    max-width: 100px;
+    height: 130px;
+    border-radius: var(--gui-border-radius-base);
+    padding: 12px 10px;
+    color: var(--gui-color-primary);
+}
+
+.cardBalanceName {
+    font-size: 12px;
+}
+
+.cardBalanceAmount {
+    font-weight: 700;
+    font-size: 12px;
+}

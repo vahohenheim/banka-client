@@ -1,0 +1,20 @@
+.cardProject {
+    height: 60px;
+    color: var(--gui-color-grey-lighten-1);
+}
+
+.cardProjectName {
+    font-size: 11px;
+}
+
+.cardProjectAmount {
+    font-weight: 900;
+    font-size: 16px;
+    color: #9A9A9A;
+}
+
+.cardProjectGoal {
+    opacity: 0.5;
+    font-weight: 700;
+    font-size: 9px;
+}

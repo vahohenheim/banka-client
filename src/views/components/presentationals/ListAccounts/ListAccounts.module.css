@@ -1,0 +1,22 @@
+.container {
+
+}
+
+.label {
+    opacity: 0.5;
+    font-size: 13px;
+    color: #4A4A4A;
+    padding-left: 20px;
+}
+
+.listAccounts {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 20px 0 20px 20px;
+    overflow-x: scroll;
+}
+
+.cardAccount {
+    margin-right: 20px;
+}

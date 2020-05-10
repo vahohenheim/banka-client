@@ -1,0 +1,31 @@
+.container {
+    color: var(--gui-color-grey-lighten-1);
+}
+
+.nameAccount {
+    opacity: 0.5;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 7px;
+    color: var(--gui-color-grey-lighten-1);
+}
+
+.balanceAmount {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 10px;
+}
+
+.amount {
+    font-weight: 900;
+    font-size: 43px;
+    color: var(--gui-color-primary);
+}
+
+.budget {
+    opacity: 0.5;
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--gui-color-secondary);
+}

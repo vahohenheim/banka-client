@@ -1,0 +1,12 @@
+.actions {
+    color: var(--gui-color-grey-lighten-1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.empty {
+    color: var(--gui-color-primary);
+    text-align: center;
+}

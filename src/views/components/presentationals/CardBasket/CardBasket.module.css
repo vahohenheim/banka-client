@@ -1,0 +1,33 @@
+.cardBasket {
+    border: 1px solid var(--gui-color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 130px;
+    width: 100%;
+    border-radius: var(--gui-border-radius-base);
+    padding: 30px 10px 12px 10px;
+    color: var(--gui-color-primary);
+}
+
+.cardBasketNegative {
+    border: 1px solid var(--gui-color-danger);
+    color: var(--gui-color-danger);
+}
+
+.cardBasketIcon {
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.cardBasketAmount {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.cardBasketName {
+    font-size: 11px;
+    text-align: center;
+}
