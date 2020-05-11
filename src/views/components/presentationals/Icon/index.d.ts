@@ -6,6 +6,7 @@ declare type Props = {
     size: number;
     className?: string;
     direction?: DirectionIcon;
+    onClick?: void;
 };
 declare const Icon: React.FC<Props>;
 export default Icon;

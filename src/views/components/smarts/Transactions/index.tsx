@@ -2,74 +2,75 @@ import React from 'react'
 import {Transaction} from '../../../../models/account'
 
 import * as styles from './Transactions.module.css';
-import Icon from "../../presentationals/Icon";
 import ListTransactions from "../../presentationals/ListTransactions";
 import Heading from "../../presentationals/Heading";
+import moment from "moment";
+import Empty from "../../presentationals/Empty";
 
 type Props = {
     transactions?: Transaction[];
 }
 
-/*
+const Transactions: React.FC<Props> = ({ transactions }) => {
+
+    const classifiedTransactions = classifyTransactionsByDate(transactions);
+
+    const isEmpty: boolean = !transactions || transactions.length === 0;
+
+    return (
+        <div className={styles.container}>
+            <Heading className={`${styles.title} ${isEmpty ? styles.empty : ''}`} tag="h2">Transaction</Heading>
+            {!isEmpty ? (
+                <>
+                    {classifiedTransactions.map((classifiedTransaction) => (
+                        <div className={styles.transactionsByDate}>
+                            <p className={styles.date}>{moment(classifiedTransaction.date).format("DD MMM YYYY")}</p>
+                            <ListTransactions transactions={classifiedTransaction.transactions} />
+                        </div>
+                    ))}
+                    <div className={styles.link}>
+                        <a>Voir toutes les transactions</a>
+                    </div>
+                </>
+            ) : (
+                <Empty importantContent={"Ajouter vos premières transactions"} thinContent={"pour vivre l'expérience banka"} />
+            )}
+        </div>
+    )
+}
+
+export default Transactions
+
 interface classifiedTransactionsByDate {
-    date: Date;
+    date: string;
     transactions: Transaction[];
 }
 
 
-const classifyTransactionsByDate = (transactions: Transaction[]): classifiedTransactionsByDate[] => {
+const classifyTransactionsByDate = (transactions: Transaction[] | undefined): classifiedTransactionsByDate[] => {
 
     let classifiedTransactions: classifiedTransactionsByDate[] = []
 
-    //TODO: reunir le test + l'ajout pour reduire la manipulation des dates
+    //TODO: Optimiziation necessery
 
-    transactions.map((transaction) => {
+    transactions?.map((transaction) => {
+        const date = moment(transaction.date).format('DD-MM-YYYY');
+
         let isExistingDate: classifiedTransactionsByDate | undefined = classifiedTransactions.find((classifiedTransaction) => {
-            return (classifiedTransaction.date - transaction.date) === 0
+            return classifiedTransaction.date === date
         });
 
         if(!!isExistingDate) {
             classifiedTransactions.map((classifiedTransaction) => {
-                if(classifiedTransaction.date === transaction.date) {
+                if(classifiedTransaction.date === date) {
                     classifiedTransaction.transactions.push(transaction);
                 }
             })
         } else {
-            classifiedTransactions.push({ date: transaction.date, transactions: [transaction] });
+            classifiedTransactions.push({ date: date, transactions: [transaction] });
         }
     })
 
     return classifiedTransactions;
 
-}*/
-
-const Transactions: React.FC<Props> = ({ transactions }) => {
-
-    if(!!transactions) {
-
-        //let classifiedTransactions = classifyTransactionsByDate(transactions);
-
-        return (
-            <>
-                <Heading tag="h2">Transaction</Heading>
-                {/*classifiedTransactions.map((classifiedTransaction) => (
-                    <>
-                        <p>{classifiedTransaction.date}</p>
-                        <ListTransactions transactions={classifiedTransaction.transactions} />
-                    </>
-                ))*/}
-                <ListTransactions transactions={transactions} />
-            </>
-        )
-    } else {
-        return (
-            <div className={styles.empty}>
-                <p>Ajouter vos premières transactions</p>
-                <p>pour vivre l'expérience banka</p>
-                <Icon id="add" size={15} />
-            </div>
-        )
-    }
 }
-
-export default Transactions

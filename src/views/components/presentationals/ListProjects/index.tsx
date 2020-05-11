@@ -13,7 +13,7 @@ const ListProjects: React.FC<Props> = ({ projects }) => {
     return (
         <div className={styles.container}>
             {projects.map((project) => (
-                <CardProject key={project.id} project={project} />
+                <CardProject className={styles.item} key={project.id} project={project} />
             ))}
         </div>
     )

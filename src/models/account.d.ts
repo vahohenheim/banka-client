@@ -29,7 +29,7 @@ export interface Transaction {
     category: string;
     name: string;
     amount: number;
-    date: Date;
+    date: string;
 }
 export interface Basket {
     id: number;

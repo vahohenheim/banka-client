@@ -1,0 +1,19 @@
+.container {
+    text-align: center;
+    color: var(--gui-color-primary);
+}
+
+.important {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.thin {
+    font-size: 11px;
+    line-height: 14px;
+}
+
+.action {
+    margin-bottom: 5px;
+}

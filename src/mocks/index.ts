@@ -50,7 +50,7 @@ export const accounts: Account[] = [
                 category: "Transport",
                 name: "SNCF - Le Mans - Nantes",
                 amount: -14.34,
-                date: new Date('12-04-2020 12:45:23')
+                date: '12-04-2020 12:45:23'
             },
             {
                 id: 2,
@@ -58,7 +58,7 @@ export const accounts: Account[] = [
                 category: "Courses",
                 name: "Carrefour - Courses pour la semaine",
                 amount: -46.98,
-                date: new Date('12-04-2020 14:34:02')
+                date: '12-04-2020 14:34:02'
             },
             {
                 id: 3,
@@ -66,7 +66,7 @@ export const accounts: Account[] = [
                 category: "État",
                 name: "CAF - Prime d’activité",
                 amount: -46.98,
-                date: new Date('08-04-2020 10:56:42')
+                date: '08-04-2020 10:56:42'
             },
         ],
         baskets: [

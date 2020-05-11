@@ -7,12 +7,14 @@ type Props = {
     size: number;
     className?: string;
     direction?: DirectionIcon;
+    onClick?: void;
 }
 
 interface IconComponent {
     size: number;
     rotation?: number;
     className?: string;
+    onClick?: void;
 }
 
 const findById = (value: IconType): IconConfig | undefined => {
@@ -23,7 +25,7 @@ const findRotation = (value: string): degreeIconConfig | undefined => {
     return arrowDegreesConfig.find((degree) => degree.direction === value);
 }
 
-const Icon: React.FC<Props> = ({ id, size, direction, className }) => {
+const Icon: React.FC<Props> = ({ id, size, direction, className, onClick }) => {
     const icon: IconConfig | undefined = findById(id);
     const IconComponent: FunctionComponent<IconComponent> | undefined = icon?.component
     let rotation: number | undefined;
@@ -33,7 +35,11 @@ const Icon: React.FC<Props> = ({ id, size, direction, className }) => {
     }
 
     if(IconComponent) {
-        return  <IconComponent size={size} rotation={rotation} className={className} />
+        return (
+            <div onClick={() => onClick}>
+                <IconComponent size={size} rotation={rotation} className={className} />
+            </div>
+        )
     };
     return <p>Invalid Icon</p>
 }

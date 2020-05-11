@@ -15,16 +15,16 @@ type Props = {
 const CardAccount: React.FC<Props> = ({ account, onClick, current, key, className }) => {
 
     return (
-        <div key={key} onClick={onClick} className={`${styles.cardAccount} ${ current ? styles.cardAccountCurrent : ''} ${className}`}>
-            <h2 className={styles.cardAccountName}>{account.name}</h2>
-            <p className={styles.cardAccountAmount}>{account.amount}€</p>
+        <div key={key} onClick={onClick} className={`${styles.container} ${ current ? styles.current : ''} ${className}`}>
+            <h2 className={styles.name}>{account.name}</h2>
+            <p className={styles.amount}>{account.amount}€</p>
 
-            <div className={styles.cardAccountBalance}>
-                <p className={styles.cardAccountBalanceCredit}>
+            <div className={styles.balance}>
+                <p className={styles.credit}>
                     <Icon id="arrow" size={9} direction="top" />
                     {account.credit}€
                 </p>
-                <p className={styles.cardAccountBalanceDebit}>
+                <p className={styles.debit}>
                     <Icon id="arrow" size={9} direction="bottom" />
                     {account.debit}€
                 </p>

@@ -1,12 +1,35 @@
-.actions {
+.container {
+    padding: 30px 0;
+}
+
+.title {
     color: var(--gui-color-grey-lighten-1);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    padding-bottom: 8px;
 }
 
 .empty {
-    color: var(--gui-color-primary);
     text-align: center;
+}
+
+.transactionsByDate {
+    margin-bottom: 15px;
+}
+
+
+.date {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--gui-color-grey-lighten-2);
+    margin-bottom: 6px;
+}
+
+.link {
+    text-align: right;
+}
+
+.link a {
+    color: var(--gui-color-primary);
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 13px;
 }

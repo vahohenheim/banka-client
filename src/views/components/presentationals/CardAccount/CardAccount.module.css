@@ -1,4 +1,4 @@
-.cardAccount {
+.container {
     color: var(--gui-color-grey);
     background-color: var(--gui-color-white);
     box-shadow: var(--gui-shadow-base);
@@ -9,40 +9,42 @@
     padding: 12px 10px;
 }
 
-.cardAccountCurrent {
+.current {
     color: var(--gui-color-white);
     background-color: var(--gui-color-secondary);
     box-shadow: var(--gui-shadow-secondary);
 }
 
-.cardAccountName {
+.name {
     opacity: .5;
     font-weight: 600;
     font-size: 12px;
     margin: 0;
 }
 
-.cardAccountAmount {
+.amount {
     font-size: 24px;
     font-weight: 700;
     margin: 3px 0 8px 0;
 }
 
-.cardAccountBalance {
+.balance {
     display: flex;
     flex-direction: column;
 }
 
-.cardAccountBalanceCredit {
+.credit {
     color: var(--gui-color-success);
-    font-weight: 600;
-    font-size: 12px;
-    margin: 3px 0;
 }
 
-.cardAccountBalanceDebit {
+.debit {
     color: var(--gui-color-danger);
+}
+
+.credit, .debit {
     font-weight: 600;
     font-size: 12px;
     margin: 3px 0;
+    display: flex;
+    flex-direction: row;
 }

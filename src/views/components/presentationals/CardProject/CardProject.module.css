@@ -1,20 +1,56 @@
-.cardProject {
+.container {
     height: 60px;
     color: var(--gui-color-grey-lighten-1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--gui-shadow-base);
+    border-radius: var(--gui-border-radius-base);
+    overflow: hidden;
 }
 
-.cardProjectName {
+.picture {
+    height: 100%;
+    width: 70px;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.name {
     font-size: 11px;
 }
 
-.cardProjectAmount {
+.balance {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.amount {
     font-weight: 900;
     font-size: 16px;
     color: #9A9A9A;
 }
 
-.cardProjectGoal {
+.goal {
     opacity: 0.5;
     font-weight: 700;
     font-size: 9px;
+}
+
+.progress {
+    height: 5px;
+    background-color: var(--gui-color-primary);
 }

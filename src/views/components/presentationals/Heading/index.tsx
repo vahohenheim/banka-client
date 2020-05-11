@@ -6,14 +6,15 @@ type Tags = 'h1' | 'h2' | 'h3';
 type Props = {
     tag: Tags;
     children: React.ReactNode;
+    className?: string;
 }
 
-const Heading: React.FC<Props> = ({ tag, children }) => {
+const Heading: React.FC<Props> = ({ tag, children, className }) => {
 
     return React.createElement(
         tag,
         {
-            className: styles[tag]
+            className:[className, styles[tag]].filter((s) => s).join(' ')
         },
         children);
 }
