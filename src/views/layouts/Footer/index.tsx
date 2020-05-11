@@ -10,7 +10,7 @@ const Footer: React.FC<{}> = () => {
     return (
         <footer className={styles.container}>
            <Container>
-               <p className={styles.content}>Made with ♥ by valentinbourreau</p>
+               <p className={styles.content}>Made with 🖤️ by valentinbourreau</p>
            </Container>
         </footer>
     )
