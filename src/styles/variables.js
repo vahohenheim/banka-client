@@ -2,6 +2,7 @@ const variables = {
     'gui-color-white': '#FFFFFF',
     'gui-color-primary': '#77B3A9',
     'gui-color-secondary': '#053B45',
+    'gui-color-primary-gradient': 'linear-gradient(-135deg, rgba(123,186,175,0.10) 0%, rgba(123,186,175,0.25) 100%)',
     'gui-color-success': '#C0E682',
     'gui-color-danger': '#FFA4A4',
     'gui-color-grey': '#4A4A4A',

@@ -1,4 +1,4 @@
-.cardTransaction {
+.container {
     border: 1px dashed var(--gui-color-grey-lighten-1);
     color: var(--gui-color-grey-lighten-1);
     display: flex;
@@ -8,27 +8,27 @@
     padding: 10px;
 }
 
-.cardTransaction > div:nth-child(2) {
+.container > div:nth-child(2) {
     flex-grow: 1;
     padding: 0 10px;
 }
 
-.cardTransactionCategory {
+.category {
     font-weight: 700;
     font-size: 12px;
 }
 
-.cardTransactionName {
+.name {
     font-size: 14px;
 }
 
-.cardTransactionAmount {
+.amount {
     font-weight: 700;
     font-size: 14px;
     color: var(--gui-color-primary);
     text-align: right;
 }
 
-.cardTransactionAmountNegative {
+.negative {
     color: var(--gui-color-danger);
 }

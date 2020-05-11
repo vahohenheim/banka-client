@@ -21,11 +21,11 @@ const CardAccount: React.FC<Props> = ({ account, onClick, current, key, classNam
 
             <div className={styles.balance}>
                 <p className={styles.credit}>
-                    <Icon id="arrow" size={9} direction="top" />
+                    <Icon id="arrow" size={13} direction="top" />
                     {account.credit}€
                 </p>
                 <p className={styles.debit}>
-                    <Icon id="arrow" size={9} direction="bottom" />
+                    <Icon id="arrow" size={13} direction="bottom" />
                     {account.debit}€
                 </p>
             </div>

@@ -19,11 +19,9 @@ const Home: React.FC = () => {
 
     return (
        <>
-           <Container>
-               <HeaderTitle>Bonjour {user.firstname},</HeaderTitle>
-           </Container>
-
-           <ListAccounts accounts={accounts} currentAccount={currentAccount} setCurrentAccount={setCurrentAccount} />
+           <HeaderTitle title={`Bonjour ${user.firstname},`}>
+               <ListAccounts accounts={accounts} currentAccount={currentAccount} setCurrentAccount={setCurrentAccount} />
+           </HeaderTitle>
 
            <Container>
                <Balance account={currentAccount} />

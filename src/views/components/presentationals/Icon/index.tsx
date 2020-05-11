@@ -1,6 +1,8 @@
-import React, {FunctionComponent} from "react";
+import React, {CSSProperties, FunctionComponent} from "react";
 import {arrowDegreesConfig, Icons, IconType} from "../../../../constants/icons";
 import {IconConfig, DirectionIcon, degreeIconConfig} from "../../../../models/icons";
+
+import * as styles from './Icon.module.css';
 
 type Props = {
     id: IconType;
@@ -34,10 +36,15 @@ const Icon: React.FC<Props> = ({ id, size, direction, className, onClick }) => {
         rotation = findRotation(direction)?.value;
     }
 
+    const containerSize: CSSProperties = {
+        width: size,
+        height: size
+    };
+
     if(IconComponent) {
         return (
-            <div onClick={() => onClick}>
-                <IconComponent size={size} rotation={rotation} className={className} />
+            <div className={[styles.container, className].join(' ')} style={containerSize} onClick={() => onClick}>
+                <IconComponent className={styles.icon} size={size} rotation={rotation} />
             </div>
         )
     };
