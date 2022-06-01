@@ -43,7 +43,7 @@
     "postcss-normalize": "^7.0.1",
     "react-hot-loader": "^4.12.21",
     "responsive-loader": "^1.2.0",
-    "sharp": "^0.21.3",
+    "sharp": "^0.30.5",
     "style-loader": "^0.23.0",
     "svg-loader": "0.0.2",
     "ts-loader": "^7.0.2",
